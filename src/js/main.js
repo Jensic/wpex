@@ -2,4 +2,13 @@
             MAIN JAVASCRIPT CODE
 *****************************************/
 
-//console.log("It WORKS! YIPPIE!!");
+(function($) {
+ 
+    "use strict";
+     
+    // javascript code here. i.e.: $(document).ready( function(){} );
+    $(document).ready( function(){
+        //console.log("It WORKS! YIPPIE!!");
+    });
+ 
+})(jQuery);
