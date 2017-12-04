@@ -6,10 +6,12 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">WT</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <?php bootstrap_nav(); ?>
-        </nav>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-ex">
+                <a class="navbar-brand navbar-ex__brand" href="#">WT</a>
+                <button class="navbar-toggler navbar-ex__button" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-ex__button__toggler"></span>
+                </button>
+                <?php bootstrap_nav(); ?>
+            </nav>
+        </header>

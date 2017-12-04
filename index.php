@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="container-fluid header">
+<div class="container-fluid banner">
   <div class="row">
    <div class="col-12">
        <h1 class="test">Hello</h1>

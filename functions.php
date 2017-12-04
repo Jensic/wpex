@@ -45,9 +45,9 @@ function bootstrap_nav() {
         'theme_location'    => 'primary',
         'depth'             => 2,
         'container'         => 'div',
-        'container_class'   => 'collapse navbar-collapse',
+        'container_class'   => 'collapse navbar-collapse navbar-ex__links',
         'container_id'      => 'navbar',
-        'menu_class'        => 'navbar-nav mr-auto',
+        'menu_class'        => 'navbar-nav navbar-ex__links__ul',
         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
         'walker'            => new WP_Bootstrap_Navwalker())
     );
