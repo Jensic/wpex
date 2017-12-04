@@ -1,14 +1,14 @@
 .navbar-ex {
     background-color: transparent;
     position: absolute;
-    top: 46px;
+    top: 6.7rem;
     left: 0;
     right: 0;
     z-index: 3;
     font-size: 1.6rem;
-    @media(min-width: 783px) {
-        top: 32px;
-    }
+//    @media(min-width: 783px) {
+//        top: 32px;
+//    }
     &__brand {
         background-color: transparent;
     }
@@ -17,7 +17,6 @@
         justify-content: flex-end;
         &__ul {
             background-color: transparent;
-            margin-right: 5rem;
         }
     }
     &__button {
