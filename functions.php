@@ -17,7 +17,7 @@ function ex_files() {
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css', false, microtime(), 'all');
     
     // Register Custom Navigation Walker
-    require_once('class-wp-bootstrap-navwalker.php');
+    require_once('inc/class-wp-bootstrap-navwalker.php');
     
 }
 
