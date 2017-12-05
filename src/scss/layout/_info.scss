@@ -1,9 +1,10 @@
 .info {
-    height: 10vh;
+    height: 20vh;
     background: linear-gradient(-45deg,#ec5252,#6e1a52);
     color: $color-white;
     &__container {
         display: flex;
+        margin-top: 5rem;
         &__text {
             margin-top: 0.7rem;
             &--main {

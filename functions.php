@@ -34,7 +34,10 @@ add_action('after_setup_theme', 'ex_features');
 
 function ex_menus() {
     register_nav_menus( array(
-    	'primary' => __('Primary Menu', 'ex'),
+    	'primary'      => __('Primary Menu', 'ex'),
+        'footer'       => __('Footer Menu', 'ex'),
+        'footer2'       => __('Footer Menu 2', 'ex'),
+        'footer3'       => __('Footer Menu 3', 'ex'),
 	));
 }
 
@@ -51,4 +54,49 @@ function bootstrap_nav() {
         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
         'walker'            => new WP_Bootstrap_Navwalker())
     );
-    }
+}
+
+function bootstrap_footer() {
+    wp_nav_menu(array(
+        'theme_location'    => 'footer',
+        'depth'             => 2,
+        'container'         => false,
+        'menu_class'        => 'navbar-nav navbar-ex__links__ul',
+        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'            => new WP_Bootstrap_Navwalker())
+    );
+}
+
+function bootstrap_footer2() {
+    wp_nav_menu(array(
+        'theme_location'    => 'footer2',
+        'depth'             => 2,
+        'container'         => false,
+        'menu_class'        => 'navbar-nav navbar-ex__links__ul',
+        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'            => new WP_Bootstrap_Navwalker())
+    );
+}
+
+function bootstrap_footer3() {
+    wp_nav_menu(array(
+        'theme_location'    => 'footer3',
+        'depth'             => 2,
+        'container'         => false,
+        'menu_class'        => 'navbar-nav navbar-ex__links__ul',
+        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+        'walker'            => new WP_Bootstrap_Navwalker())
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
