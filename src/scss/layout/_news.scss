@@ -22,3 +22,26 @@
         }
     }
 }
+
+.post-single {
+    text-align: center;
+}
+
+.post-content {
+    margin-top: 10rem;
+    justify-content: center;
+    &__header {
+        margin-bottom: 5rem;
+        &__h1 {
+            font-size: 4rem;
+        }
+    }
+    &__thumbnail {
+        
+    }
+    &__text {
+        img {
+            max-width: 100%;
+        }
+    }
+}
