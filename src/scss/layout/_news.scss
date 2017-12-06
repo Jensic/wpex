@@ -1,11 +1,24 @@
-.news {
-    height: 60vh;
-    background-color: cornflowerblue;
-    &__content {
-        padding-top: 17rem;
-        &__header {
+.post {
+    justify-content: center;
+    &__container {
+        margin: 1rem 0;
+        &__img {
             text-align: center;
-            margin-bottom: 4rem;
+            margin: 1rem 0;
+        }
+        &__text {
+            &__excerpt {
+
+            }
+            &__link {
+                color: cadetblue;
+                font-size: 2rem;
+            }
+            &__author {
+                a {
+                    color: brown;
+                }
+            }
         }
     }
 }
