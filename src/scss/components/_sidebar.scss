@@ -1,0 +1,13 @@
+.sidebar__widget-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__widget {
+        ul {
+            list-style: none;
+        }
+        &__title {
+            
+        }
+    }
+}
