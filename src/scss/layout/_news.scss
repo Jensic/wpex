@@ -48,6 +48,11 @@
     }
 }
 
+.post-links {
+    display: flex;
+    justify-content: center;
+}
+
 .news-comments {
     font-size: 1.6rem;
     &__title {

@@ -25,7 +25,15 @@
         </div>
         <?php
     }
-    echo paginate_links();
+    ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 post-links">
+                <?php echo paginate_links(); ?>
+            </div>
+        </div>
+    </div>
+    <?php
 ?>
 
 <?php get_footer(); ?>
