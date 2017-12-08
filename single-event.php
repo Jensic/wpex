@@ -6,32 +6,31 @@
     <?php get_template_part('template-parts/banner-archive'); ?>
 
     <div class="container">
-          <div class="metabox metabox--position-up metabox--with-home-link">
-        <p><a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('event'); ?>"><i class="fa fa-home" aria-hidden="true"></i> Event Home</a> <span class="metabox__main"><?php the_title(); ?></span></p>
-      </div>
+        <div class="row single-event-ex">
+            <div class="col-8">
+                <div class="single-event-ex__container">
+                    <?php get_template_part('template-parts/single-event-card'); ?>
+                </div>
 
-      <div class="generic-content"><?php the_content(); ?></div>
+                <?php 
 
-      <?php 
-      
-      $relatedPrograms = get_field('related_programs');
+                    $relatedPrograms = get_field('related_programs');
 
-      if($relatedPrograms) {
-        echo '<hr class="section-break">';
-        echo '<h2 class="">Related program(s)</h2>';
-        echo '<ul class="link-list min-list">';
-        foreach($relatedPrograms as $program) { ?>
-          <li><a href="<?= get_the_permalink($program); ?>"><?= get_the_title($program); ?></a></li>
-        <?php }
-        echo '</ul>';
-      }
+                    if($relatedPrograms) {
+                    echo '<hr class="section-break">';
+                    echo '<h2 class="">Related program(s)</h2>';
+                    echo '<ul class="link-list min-list">';
+                    foreach($relatedPrograms as $program) { ?>
+                      <li><a href="<?= get_the_permalink($program); ?>"><?= get_the_title($program); ?></a></li>
+                <?php }
+                    echo '</ul>';
+                }
 
-      ?>
-
+                ?>
+            </div>
+        </div>
     </div>
     
-
-    
-  <?php }
+    <?php }
 
 get_footer(); ?>
