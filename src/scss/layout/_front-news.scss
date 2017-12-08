@@ -1,11 +1,16 @@
 .news {
-    height: 60vh;
+    height: 75vh;
     background-color: cornflowerblue;
     &__content {
         padding-top: 17rem;
         &__header {
             text-align: center;
             margin-bottom: 4rem;
+        }
+        &__button {
+            display: flex;
+            justify-content: center;
+            margin-top: 5rem;
         }
     }
 }

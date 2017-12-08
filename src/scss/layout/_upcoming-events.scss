@@ -1,0 +1,32 @@
+.event-summary {
+    margin-bottom: 20px;
+    &__content {
+        &__title {
+            a {
+                color: #173f58;
+            }
+        }
+    }
+    &__date {
+        text-decoration: none;
+        transition: opacity .33s;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
+        &:hover {
+            opacity: .75;
+            text-decoration: none;
+            color: darken($events-link-color, 15%);  
+        }
+        &__month {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        &__day {
+            font-size: 2.02rem;
+            font-weight: 700;
+        }
+        &__date--beige {
+            background-color: $main-yellow;
+        }
+    }
+}
