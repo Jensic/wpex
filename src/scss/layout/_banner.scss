@@ -1,3 +1,36 @@
+.banner {
+    background: linear-gradient(-110deg,#ec5252,#6e1a52);
+    &__container {
+        height: 35vh;
+        background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+        url(../media/img/newsbanner.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+        &__logo-box {
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+        &__logo {
+            height: 3.5rem;
+        }
+        }
+        &__text-box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    }
+}
+
 .frontbanner {
     background: linear-gradient(-110deg,#ec5252,#6e1a52);
     &__container {
