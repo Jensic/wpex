@@ -3,8 +3,8 @@
 <?php get_template_part('template-parts/banner-news'); ?>
 
 <div class="container">
-	<div id="primary" class="row">
-		<main id="main" class="col-12 post-single" role="main">
+	<div class="row">
+		<main class="col-12 post-single" role="main">
 
 			<?php
 				/* Start the Loop */

@@ -3,8 +3,8 @@
 <?php get_template_part('template-parts/banner-404'); ?> 
 
 <div class="container">
-	<div id="primary" class="row">
-		<main id="main" class="col-12" role="main">
+	<div class="row">
+		<main class="col-12" role="main">
 
 			<section class="error-404">
 				<header class="error-404__header">

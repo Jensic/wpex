@@ -4,7 +4,7 @@
 
 <div class="container">
         
-        <div id="primary" class="row">
+        <div class="row">
 
         <div class="col-12 search">
             <header class="search__header">
@@ -16,7 +16,7 @@
             </header><!-- .page-header -->
         </div>
 
-		<main id="main" class="col-12 search-main" role="main">
+		<main class="col-12 search-main" role="main">
 
 		<?php
 		if (have_posts()) :

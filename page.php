@@ -3,8 +3,8 @@
 <?php get_template_part('template-parts/banner-page') ?>
 
 <div class="container">
-	<div id="primary" class="row">
-		<main id="main" class="col-12 page" role="main">
+	<div class="row">
+		<main class="col-12 page" role="main">
 
 			<?php
 			while (have_posts() ) : the_post();
