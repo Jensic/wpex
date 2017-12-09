@@ -152,4 +152,3 @@ add_action('pre_get_posts', 'ex_adjust_queries');
 
 
 
-

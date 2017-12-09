@@ -1,13 +1,24 @@
 .about {
-    &__link {
-        
+    margin: 4rem 0;
+    &__home {
+        &__link {
+
+        }
+        &__title {
+
+        }
     }
-    &__title {
-        
-    }
-}
-.about-links {
-    &__title {
-        
+    &__container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        &__links {
+            &__title {
+
+            }
+        }
+        &__content {
+            
+        }
     }
 }
