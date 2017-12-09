@@ -1,3 +1,5 @@
+<?php get_template_part('template-parts/banner'); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('page__article'); ?>>
 	<header class="page__article__header">
 		<?php the_title( '<h1 class="page__article__header__title">', '</h1>' ); ?>
