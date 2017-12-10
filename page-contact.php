@@ -6,10 +6,10 @@
     <?php get_template_part('template-parts/banner'); ?>
 
     <div class="container">
-        <div class="row">
-            <div class="col-12 contact">
-                    
-            </div>
+        <div class="row contact">
+            <main class="col-6 contact__form">
+                <?php the_content(); ?>    
+            </main>
         </div>
     </div>
     
