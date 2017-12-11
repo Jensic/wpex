@@ -1,5 +1,21 @@
 .single-company {
     justify-content: center;
+    &__article {
+        &__header {
+            &__link {
+
+            }
+            &__title {
+
+            }
+        }
+        &__img {
+
+        }
+        &__content {
+
+        }
+    }
     &__list {
         list-style: none;
         &__item {

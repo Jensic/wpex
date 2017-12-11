@@ -6,12 +6,21 @@
 
     <div class="container">
         <div class="row single-company">
-            <div class="col-6">
-                <div class="">
-                    <p><a class="" href="<?php echo get_post_type_archive_link('company'); ?>"><i class="fa fa-home" aria-hidden="true"></i> All Companies</a> <span class=""><?php the_title(); ?></span></p>
-                </div>
+            <div class="col-8">
+                <article class="single-company__article">
+                    <div class="single-company__article__header">
+                        <p><a class="single-company__article__header__link" href="<?php echo get_post_type_archive_link('company'); ?>"><i class="fa fa-home" aria-hidden="true"></i> All Companies</a></p>
+                        <h2 class="single-company__article__header__title"><?php the_title(); ?></h2>
+                    </div>
 
-              <div class=""><?php the_content(); ?></div>
+                    <div class="single-company__article__img">
+                        <?php the_post_thumbnail('medium'); ?>
+                    </div>
+
+                    <div class="single-company__article__content">
+                        <?php the_content(); ?>
+                    </div>
+                </article>
 
               <?php
                 $relatedPersons = new WP_Query(array(
