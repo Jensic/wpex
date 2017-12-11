@@ -57,7 +57,7 @@
                 wp_reset_postdata();
 
               //WORK IN PROGRESS
-        /*        $today = date('Ymd');
+                $today = date('Ymd');
                 $homepageEvents = new WP_Query(array(
                     'posts_per_page'    =>  2,
                     'post_type'         =>  'event',
@@ -72,7 +72,7 @@
                             'type'      => 'numeric'
                         ),
                         array(
-                            'key'       =>  'related_programs',
+                            'key'       =>  'event_host',
                             'compare'   =>  'LIKE',
                             'value'     =>  '"' . get_the_ID() . '"'
                         )
@@ -103,7 +103,7 @@
                           </div>
                         </div>
                     <?php }
-                }*/
+                }
 
                 ?>
             </div>
