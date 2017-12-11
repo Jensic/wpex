@@ -2,7 +2,7 @@
 function ex_post_types () {
 	// Event Post Type
   register_post_type('event', array(
-    'supports'    => array('title', 'editor', 'excerpt'),
+    'supports'    => array('title', 'editor', 'excerpt', 'thumbnail'),
     'rewrite'     =>  array('slug'  =>  'events'),
     'has_archive' =>  true,
     'public'      =>  true,
@@ -16,19 +16,34 @@ function ex_post_types () {
     'menu_icon' =>  'dashicons-calendar'
   ));
   
-  register_post_type('program', array(
-    'supports'    => array('title', 'editor'),
-    'rewrite'     =>  array('slug'  =>  'programs'),
+  //Company
+  register_post_type('company', array(
+    'supports'    => array('title', 'editor', 'excerpt', 'thumbnail'),
+    'rewrite'     =>  array('slug'  =>  'companies'),
     'has_archive' =>  true,
     'public'      =>  true,
     'labels'      =>  array(
-        'name'          =>  'Programs',
-        'add_new_item'  =>  'Add New Program',
-        'edit_item'     =>  'Edit Program',
-        'all_items'     =>  'All Programs',
-        'singular_name' =>  'Program'
+        'name'          =>  'Companies',
+        'add_new_item'  =>  'Add New Company',
+        'edit_item'     =>  'Edit Company',
+        'all_items'     =>  'All Companies',
+        'singular_name' =>  'Company'
     ),
     'menu_icon' =>  'dashicons-awards'
   ));
+  
+    // Person Post Type
+    register_post_type('person', array(
+		'supports'    => array('title', 'editor', 'thumbnail'),
+		'public'      =>  true,
+		'labels'      =>  array(
+			'name'          =>  'Persons',
+			'add_new_item'  =>  'Add New Person',
+			'edit_item'     =>  'Edit Person',
+			'all_items'     =>  'All Persons',
+			'singular_name' =>  'Person'
+		),
+		'menu_icon' =>  'dashicons-welcome-learn-more'
+	  ));
 }
 add_action('init', 'ex_post_types');

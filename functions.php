@@ -28,6 +28,8 @@ function ex_features() {
     add_theme_support('post-thumbnails');
     add_theme_support('html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
     add_theme_support('post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
+    add_image_size('personLandscape', 400, 260, true);
+    add_image_size('personPortrait', 480, 650, true);
 }
 
 add_action('after_setup_theme', 'ex_features');
@@ -148,7 +150,10 @@ function ex_adjust_queries($query) {
 
 add_action('pre_get_posts', 'ex_adjust_queries');
 
-
+// Removing Archive: in front of title
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('/^\w+: /', '', $title);
+});
 
 
 
