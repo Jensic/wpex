@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+//var uglify = require('gulp-uglify');
 var bs = require('browser-sync').create();
 var notify = require('gulp-notify');
 var growl = require('gulp-notify-growl');
@@ -13,6 +13,39 @@ var eslint = require('gulp-eslint');
 var babelify = require('babelify');
 var browserify = require('gulp-browserify');
 var source = require('vinyl-source-stream');
+
+var webpack = require('webpack');
+var babel = require('gulp-babel');
+
+let uglifyes = require('uglify-es');
+let composer = require('gulp-uglify/composer');
+let uglify = composer(uglifyes, console);
+
+gulp.task('compress', function () {
+    return gulp.src('src/js/**/*.js')
+	.pipe(concat('all.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./js'))
+});
+
+gulp.task('jsscripts', function () {
+    return gulp.src('src/js/**/*.js')
+        .pipe(babel())
+        .pipe(concat('all.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./js'));
+});
+
+gulp.task('jsscripts2', function(callback) {
+  webpack(require('./webpack.config.js'), function(err, stats) {
+    if (err) {
+      console.log(err.toString());
+    }
+
+    console.log(stats.toString());
+    callback();
+  });
+});
 
 gulp.task('scripts', function() {
     return gulp.src('src/js/**/*.js')

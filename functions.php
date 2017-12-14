@@ -1,6 +1,46 @@
 <?php
 
+function pageBanner($args = NULL) {
+  // php logic will live here
+  if(!$args['title']) {
+    $args['title'] = get_the_title();
+  }
+
+  if(!$args['subtitle']) {
+    $args['subtitle'] = get_field('page_banner_subtitle');
+  }
+
+  if(!$args['photo']) {
+    if(get_field('page_banner_background_image')) {
+      $args['photo'] = get_field('page_banner_background_image')['sizes'] ['pageBanner'];
+    } else {
+      $args['photo'] = get_theme_file_uri('/media/img/frontbanner.jpg');
+    }
+  }
+
+  ?>
+    <div class="container-fluid banner">
+      <div class="row banner__container" style="background-image: linear-gradient(
+        to right bottom,
+        rgba(126,213,111, 0.8),
+        rgba(40,180,133, 0.8)),
+        url(<?php echo $args['photo']; ?>);">
+       <div class="banner__container__logo-box">
+            <img src="<?php echo get_theme_file_uri('media//img/logo-white.png') ?>" alt="Logo" class="banner__container__logo-box__logo">
+        </div>
+        <div class="col-12 banner__container__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main"><?php echo $args['title']; ?></span>
+                <span class="heading-primary--sub"><?php echo $args['subtitle']; ?></span>
+            </h1>
+        </div>
+      </div>
+    </div>
+<?php 
+}
+
 function ex_files() {
+    wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyCZ0BQMj9jdo7LxG2sBQHgU2zw8TLJn0Zs', NULL, '1.0', true);
     //wp_enqueue_script('ex-js', get_theme_file_uri('/js/all.js'), NULL, microtime(), true);
     wp_enqueue_script('all', get_template_directory_uri() . '/js/all.js', array ('jquery' ), null, microtime(), true);
     
@@ -30,6 +70,7 @@ function ex_features() {
     add_theme_support('post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
     add_image_size('personLandscape', 400, 260, true);
     add_image_size('personPortrait', 480, 650, true);
+    add_image_size('pageBanner', 1500, 350, true);
 }
 
 add_action('after_setup_theme', 'ex_features');
@@ -125,6 +166,9 @@ function ex_widgets_init() {
 add_action( 'widgets_init', 'ex_widgets_init' );
 
 function ex_adjust_queries($query) {
+    if(!is_admin() AND is_post_type_archive('campus') AND $query->is_main_query()) {
+    $query->set('posts_per_page', -1);
+    }
 
   if(!is_admin() AND is_post_type_archive('program') AND $query->is_main_query()) {
     $query->set('orderby', 'title');
@@ -155,5 +199,10 @@ add_filter('get_the_archive_title', function ($title) {
     return preg_replace('/^\w+: /', '', $title);
 });
 
+function exMapKey($api) {
+  $api['key'] = 'AIzaSyCZ0BQMj9jdo7LxG2sBQHgU2zw8TLJn0Zs';
+  return $api;
+}
 
+add_filter('acf/fields/google_map/api', 'exMapKey');
 

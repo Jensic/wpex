@@ -20,12 +20,15 @@
 @import "layout/page-sitemap";
 @import "layout/archive-events";
 @import "layout/archive-companies";
+@import "layout/archive-around";
 @import "layout/single-event";
 @import "layout/single-person";
 @import "layout/single-company";
+@import "layout/single-around";
 @import "layout/error-404";
 @import "layout/footer";
 
 @import "components/navbar";
 @import "components/button";
 @import "components/sidebar";
+@import "components/gmap";
