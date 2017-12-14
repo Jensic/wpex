@@ -1,5 +1,13 @@
 <?php
 
+function ex_custom_rest() {
+  register_rest_field('post', 'authorName', array(
+    'get_callback'  =>  function() {return get_the_author();}
+  ));
+}
+
+add_action('rest_api_init', 'ex_custom_rest');
+
 function pageBanner($args = NULL) {
   // php logic will live here
   if(!$args['title']) {
@@ -55,6 +63,10 @@ function ex_files() {
     //wp_enqueue_style('ex_styles', get_stylesheet_uri());
     wp_enqueue_style('bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css');
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css', false, microtime(), 'all');
+    
+    wp_localize_script('all', 'exData', array(
+    'root_url'  => get_site_url()
+    ));
     
     // Register Custom Navigation Walker
     require_once('inc/class-wp-bootstrap-navwalker.php');

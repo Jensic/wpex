@@ -14,6 +14,7 @@
                         <span class="navbar-toggler-icon navbar-ex__button__toggler"></span>
                     </button>
                     <?php bootstrap_nav(); ?>
+                    <span class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
                 </div>
             </nav>
         </header>
