@@ -162,22 +162,60 @@
             }
 
             getResults() {
-
-                $.when(
-                    $.getJSON(exData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val()),
-                    $.getJSON(exData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val())
-                    ).then((posts, pages) => {
-                    var combineResults = posts[0].concat(pages[0]);
+                
+                $.getJSON(exData.root_url + '/wp-json/ex/v1/search?term=' + this.searchField.val(), (results) => {
                     this.resultsDiv.html(`
-                        <h2 class="search-overlay_section-title">General Information</h2>
-                        ${combineResults.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
-                           ${combineResults.map(item => `<li><a href="${item.link}">${item.title.rendered}</a> ${item.type == 'post' ? `by ${item.authorName}` : ''} </li>`).join('')} 
-                        ${combineResults.length ? '</ul>' : ''}
+                    <div class="row">
+                        <div class="one-third">
+                            <h2 class="search-overlay_section-title">General Information</h2>
+                            ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
+                            ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == 'post' ? `by ${item.authorName}` : ''} </li>`).join('')} 
+                            ${results.generalInfo.length ? '</ul>' : ''}
+                        </div>
+                        <div class="one-third">
+                            <h2 class="search-overlay_section-title">Companies</h2>
+                            ${results.companies.length ? '<ul class="link-list min-list">' : `<p>No company match that search.<a href="${exData.root_url}/companies">View all companies</a></p>`}
+                            ${results.companies.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')} 
+                            ${results.companies.length ? '</ul>' : ''}
+
+                            <h2 class="search-overlay_section-title">Persons</h2>
+                            ${results.persons.length ? '<ul class="professor-cards">' : '<p>No person match that search.</p>'}
+                            ${results.persons.map(item => `
+                            <li class="professor-card__list-item">
+                                <a class="professor-card" href="${item.permalink}">
+                                    <img class="professor-card__image" src="${item.image}" alt="">
+                                    <span class="professor-card__name">${item.title}</span>
+                                </a>
+                            </li>
+                            `).join('')} 
+                            ${results.persons.length ? '</ul>' : ''}
+                        </div>
+                        <div class="one-third">
+                            <h2 class="search-overlay_section-title">Arounds</h2>
+                            ${results.arounds.length ? '<ul class="link-list min-list">' : `<p>No arounds match that search.<a href="${exData.root_url}/arounds">View all arounds</a></p>`}
+                            ${results.arounds.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join('')} 
+                            ${results.arounds.length ? '</ul>' : ''}
+
+                            <h2 class="search-overlay_section-title">Events</h2>
+                            ${results.events.length ? '' : `<p>No events match that search.<a href="${exData.root_url}/events">View all events</a></p>`}
+                            ${results.events.map(item => `
+                            <div class="event-summary">
+                                <a class="event-summary__date t-center" href="${item.permalink}">
+                                    <span class="event-summary__month">${item.month}</span>
+                                    <span class="event-summary__day">${item.day}</span>  
+                                </a>
+                                <div class="event-summary__content">
+                                    <h5 class="event-summary__title headline headline--tiny"><a href="${item.permalink}">${item.title}</a></h5>
+                                    <p>${item.description}<a href="${item.permalink}" class="nu gray">Learn more</a></p>
+                                </div>
+                            </div>
+                            `).join('')}
+                        </div>
+                    </div
                     `);
                     this.isSpinnerVisible = false;
-                }, () => {
-                    this.resultsDiv.html('<p>Unexpected error; please try again.</p>');
                 });
+
             }
 
             keyPressDispatcher(e) {
