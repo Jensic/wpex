@@ -34,7 +34,7 @@ function ex_post_types () {
   
 	//Company
 	register_post_type('company', array(
-		'supports'    => array('title', 'editor', 'excerpt', 'thumbnail'),
+		'supports'    => array('title', 'editor', 'thumbnail'),
 		'rewrite'     =>  array('slug'  =>  'companies'),
 		'has_archive' =>  true,
 		'public'      =>  true,
@@ -50,6 +50,7 @@ function ex_post_types () {
   
     // Person Post Type
     register_post_type('person', array(
+		'show_in_rest'	=>	true,
 		'supports'    => array('title', 'editor', 'thumbnail'),
 		'public'      =>  true,
 		'labels'      =>  array(
