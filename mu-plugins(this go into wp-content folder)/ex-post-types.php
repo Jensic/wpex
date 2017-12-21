@@ -2,6 +2,8 @@
 function ex_post_types () {
 	// Around Post Type
 	register_post_type('around', array(
+		'capability_type'	=>	'around',
+		'map_meta_cap'		=>	true,
 		'supports'    => array('title', 'editor', 'excerpt'),
 		'rewrite'     =>  array('slug'  =>  'arounds'),
 		'has_archive' =>  true,
@@ -18,11 +20,13 @@ function ex_post_types () {
 	
 	// Event Post Type
 	register_post_type('event', array(
-		'supports'    => array('title', 'editor', 'excerpt', 'thumbnail'),
-		'rewrite'     =>  array('slug'  =>  'events'),
-		'has_archive' =>  true,
-		'public'      =>  true,
-		'labels'      =>  array(
+		'capability_type'	=> 'event',
+		'map_meta_cap'		=>	true,
+		'supports'    	=> array('title', 'editor', 'excerpt', 'thumbnail'),
+		'rewrite'     	=>  array('slug'  =>  'events'),
+		'has_archive'	=>  true,
+		'public'      	=>  true,
+		'labels'      	=>  array(
 			'name'          =>  'Events',
 			'add_new_item'  =>  'Add New Event',
 			'edit_item'     =>  'Edit Event',
