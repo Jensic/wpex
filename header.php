@@ -17,7 +17,8 @@
                     <span class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
                     <?php if(is_user_logged_in()) { ?>
                     
-<!--                        <span class="search-trigger"><a href="<?php echo wp_logout_url(); ?>" class=""><i class="fa fa-sign-out" aria-hidden="true"></i></a></span>-->
+<!--                        <span class="search-trigger"><a href="<?php //echo wp_logout_url(); ?>" class=""><i class="fa fa-sign-out" aria-hidden="true"></i></a></span>-->
+                            <a href="<?php echo esc_url(site_url('/my-notes')); ?>" class=""><i class="fa fa-sticky-note-o" aria-hidden="true"></i></a>
                             <a href="<?php echo wp_logout_url(); ?>" class=""><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 <!--                       <a href="<?php //echo wp_logout_url(); ?>" class="">
                            <span><?php //echo get_avatar(get_current_user_id(), 30); ?></span>
