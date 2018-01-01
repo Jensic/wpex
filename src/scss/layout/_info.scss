@@ -1,10 +1,14 @@
 .info {
-    height: 20vh;
     background: linear-gradient(-45deg,#ec5252,#6e1a52);
     color: $color-white;
+    padding-bottom: 4rem;
     &__container {
         display: flex;
         margin-top: 5rem;
+        justify-content: center;
+        @media(min-width: 783px) {
+            
+        }
         &__text {
             margin-top: 0.7rem;
             &--main {

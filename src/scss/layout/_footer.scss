@@ -1,5 +1,4 @@
 .footer {
-    height: 20vh;
     background-color: cadetblue;
     &__logo {
         margin-top: 5rem;
@@ -7,14 +6,20 @@
     }
     &__links {
         margin-top: 3rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        @media(min-width: 783px) {
+            font-size: 2rem;
+        }
     }
     &__copyright {
         margin-top: 5rem;
         padding: 0;
         &__text {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: $color-white;
+            @media(min-width: 783px) {
+                font-size: 2rem;
+            }
         }
     }
 }

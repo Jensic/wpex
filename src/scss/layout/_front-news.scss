@@ -1,16 +1,33 @@
 .news {
-    height: 75vh;
     background-color: cornflowerblue;
+    padding-bottom: 4rem;
     &__content {
-        padding-top: 17rem;
-        &__header {
-            text-align: center;
-            margin-bottom: 4rem;
+        padding-top: 4rem;
+        &__news {
+            &__header {
+                text-align: center;
+                margin-bottom: 4rem;
+            }
+            &__button {
+                display: flex;
+                justify-content: center;
+                margin-top: 5rem;
+            }
         }
-        &__button {
-            display: flex;
-            justify-content: center;
-            margin-top: 5rem;
+        &__events {
+            margin-top: 4rem;
+            @media(min-width: 783px) {
+                margin-top: 0;
+            }
+            &__header {
+                text-align: center;
+                margin-bottom: 4rem;
+            }
+            &__button {
+                display: flex;
+                justify-content: center;
+                margin-top: 5rem;
+            }
         }
     }
 }

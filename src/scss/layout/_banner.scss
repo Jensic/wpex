@@ -17,7 +17,10 @@
             top: 4rem;
             left: 4rem;
         &__logo {
-            height: 3.5rem;
+            height: 2.5rem;
+            @media(min-width: 783px) {
+                height: 3.5rem;
+            }
         }
         }
         &__text-box {
@@ -50,7 +53,10 @@
             top: 4rem;
             left: 4rem;
         &__logo {
-            height: 3.5rem;
+            height: 2.5rem;
+            @media(min-width: 783px) {
+                height: 3.5rem;
+            }
         }
         }
         &__text-box {
