@@ -1,21 +1,20 @@
 .footer {
     background-color: cadetblue;
+    margin-bottom: 1rem;
     &__logo {
         margin-top: 5rem;
-        padding: 0;
     }
     &__links {
         margin-top: 3rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         @media(min-width: 783px) {
             font-size: 2rem;
         }
     }
     &__copyright {
         margin-top: 5rem;
-        padding: 0;
         &__text {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: $color-white;
             @media(min-width: 783px) {
                 font-size: 2rem;

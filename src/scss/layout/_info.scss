@@ -1,5 +1,8 @@
 .info {
-    background: linear-gradient(-45deg,#ec5252,#6e1a52);
+    background: linear-gradient(-70deg,#ec5252,#6e1a52);
+    @media(min-width: 783px) {
+        background: linear-gradient(-45deg,#ec5252,#6e1a52);
+    }
     color: $color-white;
     padding-bottom: 4rem;
     &__container {

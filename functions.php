@@ -113,7 +113,7 @@ function bootstrap_nav() {
         'container'         => 'div',
         'container_class'   => 'collapse navbar-collapse navbar-ex__links',
         'container_id'      => 'navbar',
-        'menu_class'        => 'navbar-nav navbar-ex__links__ul',
+        'menu_class'        => 'navbar-nav navbar-ex__links__header__ul',
         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
         'walker'            => new WP_Bootstrap_Navwalker())
     );
