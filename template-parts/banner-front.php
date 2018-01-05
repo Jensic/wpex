@@ -1,7 +1,7 @@
 <div class="container-fluid frontbanner">
   <div class="row frontbanner__container">
    <div class="frontbanner__container__logo-box">
-        <img src="<?php echo get_theme_file_uri('media//img/logo-white.png') ?>" alt="Logo" class="frontbanner__container__logo-box__logo">
+       <i class="fa fa-users" aria-hidden="true"></i>
     </div>
     <div class="col-12 frontbanner__container__text-box">
         

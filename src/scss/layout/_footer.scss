@@ -2,7 +2,12 @@
     background-color: cadetblue;
     padding-bottom: 1rem;
     &__logo {
-        margin-top: 5rem;
+        margin-top: 4.5rem;
+        color: white;
+        font-size: 3rem;
+        @media(min-width: 783px) {
+            padding-left: 4rem;
+        }
     }
     &__links {
         margin-top: 3rem;

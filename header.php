@@ -18,8 +18,12 @@
                     <?php if(is_user_logged_in()) { ?>
                     
 <!--                        <span class="search-trigger"><a href="<?php //echo wp_logout_url(); ?>" class=""><i class="fa fa-sign-out" aria-hidden="true"></i></a></span>-->
-                            <a href="<?php echo esc_url(site_url('/my-notes')); ?>" class=""><i class="fa fa-sticky-note-o" aria-hidden="true"></i></a>
-                            <a href="<?php echo wp_logout_url(); ?>" class=""><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                    <a href="<?php echo esc_url(site_url('/my-notes')); ?>" class="navbar-ex__notes">
+                        <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+                    </a>
+                    <a href="<?php echo wp_logout_url(); ?>" class="navbar-ex__logout">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </a>
 <!--                       <a href="<?php //echo wp_logout_url(); ?>" class="">
                            <span><?php //echo get_avatar(get_current_user_id(), 30); ?></span>
                            <span>Log Out</span>
