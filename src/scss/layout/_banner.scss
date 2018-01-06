@@ -44,7 +44,7 @@
         url(../media/img/frontbanner.jpg);
         background-size: cover;
         background-position: center;
-        position: relative;
+        //position: relative;
 
         clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
@@ -66,8 +66,8 @@
         }
         }
         &__text-box {
-            position: absolute;
-            top: 50%;
+            //position: absolute;
+            top: 72%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
