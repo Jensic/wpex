@@ -1,41 +1,82 @@
 .info {
-    background: linear-gradient(-70deg,#ec5252,#6e1a52);
+    //background: linear-gradient(-70deg,$grey2-dark,$grey2-light);
+    background-image: linear-gradient(
+    -30deg,
+    rgba($grey2-light, 0.8),
+    rgba($grey2-dark, 0.8)),
+    url(../media/img/together.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-bottom: -1rem;
     @media(min-width: 783px) {
-        background: linear-gradient(-45deg,#ec5252,#6e1a52);
+        //background: linear-gradient(-36deg,$grey2-dark,$grey2-light);
+        background-image: linear-gradient(
+        -30deg,
+        rgba($grey2-light, 0.8),
+        rgba($grey2-dark, 0.8)),
+        url(../media/img/together.jpg);
+        background-size: cover;
+        background-position: 0 55%;
+        padding-bottom: 14rem;
     }
     color: $color-white;
-    padding-bottom: 4rem;
+    //padding-bottom: 4rem;
     &__container {
-        display: flex;
-        margin-top: 5rem;
-        justify-content: center;
+        position: relative;
+        top: -2rem;
+//        background-image: linear-gradient(
+//        -30deg,
+//        rgba($grey2-light, 0.8),
+//        rgba($grey2-dark, 0.8)),
+//        url(../media/img/together.jpg);
+//        background-size: contain;
+//        background-repeat: no-repeat;
+//        background-position: 0 0;
         @media(min-width: 783px) {
-            
+            background: transparent;
+//            background-image: linear-gradient(
+//            -30deg,
+//            rgba($grey2-light, 0.8),
+//            rgba($grey2-dark, 0.8)),
+//            url(../media/img/together.jpg);
+//            background-size: cover;
+//            background-position: 0 55%;
+//            padding-bottom: 14rem;
         }
-        &__text {
-            margin-top: 0.7rem;
-            &--main {
-                font-size: 1.7rem;
-                font-weight: 700;
-                margin: 0;
+        &__content {
+            display: flex;
+            //margin-top: 5rem;
+            justify-content: center;
+            @media(min-width: 783px) {
+
             }
-            &--sub {
-                font-size: 1.5rem;
-                margin: 0;
+            &__text {
+                margin-top: 0.7rem;
+                &--main {
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                    margin: 0;
+                }
+                &--sub {
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
             }
-        }
-        &__icon--yellow,&__icon--green,&__icon--pink {
-            font-size: 6rem;
-            margin-right: 2rem;
-        }
-        &__icon--yellow {
-            color: yellow;
-        }
-        &__icon--green {
-            color: green;
-        }
-        &__icon--pink {
-            color: hotpink;
+            &__icon--yellow,&__icon--green,&__icon--pink {
+                font-size: 6rem;
+                margin-right: 2rem;
+                margin-top: 1rem;
+            }
+            &__icon--yellow {
+                color: yellow;
+            }
+            &__icon--green {
+                color: green;
+            }
+            &__icon--pink {
+                color: hotpink;
+            }
         }
     }
 }
