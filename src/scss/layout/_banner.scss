@@ -33,24 +33,26 @@
     }
 }
 
+//@include parallax-init;
+
 .frontbanner {
     //background: linear-gradient(-110deg,$grey2-dark,$grey2-light);
-    background-image: linear-gradient(
-    -110deg,
-    rgba($grey2-light, 0.8),
-    rgba($grey2-dark, 0.8)),
-    url(../media/img/together.jpg);
-    background-size: contain;
-    background-position: 0 -27%;
+//    background-image: linear-gradient(
+//    -110deg,
+//    rgba($grey2-light, 0.8),
+//    rgba($grey2-dark, 0.8)),
+//    url(../media/img/together.jpg);
+//    background-size: contain;
+//    background-position: 0 -27%;
     @media(min-width: 783px) {
         //background: linear-gradient(-36deg,$grey2-dark,$grey2-light);
-        background-image: linear-gradient(
-        -111deg,
-        rgba($grey2-light, 0.8),
-        rgba($grey2-dark, 0.8)),
-        url(../media/img/together.jpg);
-        background-size: cover;
-        background-position: 0 -89%;
+//        background-image: linear-gradient(
+//        -111deg,
+//        rgba($grey2-light, 0.8),
+//        rgba($grey2-dark, 0.8)),
+//        url(../media/img/together.jpg);
+//        background-size: cover;
+//        background-position: 0 -89%;
     }
     &__container {
         height: 60vh;
@@ -62,8 +64,11 @@
         background-size: cover;
         background-position: center;
         //position: relative;
-
-        clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
+        //@include parallax(-.4);
+        //clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
+        @media(min-width: 763px) {
+            height: 70vh;
+        }
 
         &__logo-box {
             position: absolute;
@@ -84,11 +89,13 @@
         }
         &__text-box {
             //position: absolute;
-            top: 72%;
+            height: 33vh;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
             padding: 0;
+            //@include parallax(.4);
         }
     }
 }

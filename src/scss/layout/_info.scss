@@ -1,30 +1,34 @@
 .info {
-    //background: linear-gradient(-70deg,$grey2-dark,$grey2-light);
-    background-image: linear-gradient(
-    -30deg,
-    rgba($grey2-light, 0.8),
-    rgba($grey2-dark, 0.8)),
-    url(../media/img/together.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    margin-bottom: -1rem;
-    @media(min-width: 783px) {
-        //background: linear-gradient(-36deg,$grey2-dark,$grey2-light);
-        background-image: linear-gradient(
-        -30deg,
-        rgba($grey2-light, 0.8),
-        rgba($grey2-dark, 0.8)),
-        url(../media/img/together.jpg);
-        background-size: cover;
-        background-position: 0 55%;
-        padding-bottom: 14rem;
-    }
+    background: linear-gradient(to right bottom,$grey1-light,$grey1-dark);
+//    background-image: linear-gradient(
+//    -30deg,
+//    rgba($grey2-light, 0.8),
+//    rgba($grey2-dark, 0.8)),
+//    url(../media/img/together.jpg);
+//    background-size: contain;
+//    background-repeat: no-repeat;
+//    background-position: 0 0;
+//    margin-bottom: -1rem;
+//    @media(min-width: 783px) {
+//        //background: linear-gradient(-36deg,$grey2-dark,$grey2-light);
+//        background-image: linear-gradient(
+//        -30deg,
+//        rgba($grey2-light, 0.8),
+//        rgba($grey2-dark, 0.8)),
+//        url(../media/img/together.jpg);
+//        background-size: cover;
+//        background-position: 0 55%;
+//        padding-bottom: 14rem;
+//    }
     color: $color-white;
+    >div:first-child {
+        padding: 0;
+    }
     //padding-bottom: 4rem;
     &__container {
-        position: relative;
-        top: -2rem;
+        height: 40vh;
+//        position: relative;
+//        top: -2rem;
 //        background-image: linear-gradient(
 //        -30deg,
 //        rgba($grey2-light, 0.8),
@@ -34,7 +38,7 @@
 //        background-repeat: no-repeat;
 //        background-position: 0 0;
         @media(min-width: 783px) {
-            background: transparent;
+            //background: transparent;
 //            background-image: linear-gradient(
 //            -30deg,
 //            rgba($grey2-light, 0.8),
@@ -43,14 +47,13 @@
 //            background-size: cover;
 //            background-position: 0 55%;
 //            padding-bottom: 14rem;
+            height: 30vh;
         }
         &__content {
             display: flex;
             //margin-top: 5rem;
-            justify-content: center;
-            @media(min-width: 783px) {
-
-            }
+            align-items: center;
+            padding: 0;
             &__text {
                 margin-top: 0.7rem;
                 &--main {
@@ -65,6 +68,7 @@
             }
             &__icon--yellow,&__icon--green,&__icon--pink {
                 font-size: 6rem;
+                margin-left: calc(50% - 70px);
                 margin-right: 2rem;
                 margin-top: 1rem;
             }
