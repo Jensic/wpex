@@ -2,11 +2,12 @@
 
   while(have_posts()) {
     the_post(); ?>
-    <?php get_template_part('template-parts/banner'); ?>
+    <?php //get_template_part('template-parts/banner'); ?>
+    <?php pagebanner(); ?>
 
     <div class="container">
         <div class="row single-company">
-            <div class="col-8">
+            <div class="col-12">
                 <article class="single-company__article">
                     <div class="single-company__article__header">
                         <p><a class="single-company__article__header__link" href="<?php echo get_post_type_archive_link('company'); ?>"><i class="fa fa-home" aria-hidden="true"></i> All Companies</a></p>
@@ -45,9 +46,9 @@
                     while($relatedPersons->have_posts()) {
                         $relatedPersons->the_post(); ?>
                         <li class="single-company__list__item">
-                          <a class="" href="<?php the_permalink(); ?>">
-                            <img class="" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
-                            <span class=""><?php the_title(); ?></span>
+                          <a class="single-company__list__item__link" href="<?php the_permalink(); ?>">
+                            <img class="single-company__list__item__link__img" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
+                            <span class="single-company__list__item__link__title"><?php the_title(); ?></span>
                           </a>
                         </li>
                     <?php }

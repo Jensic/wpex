@@ -1,5 +1,15 @@
 .section-break {
-  border: none;
-  border-top: 1px solid #DDD;
-  margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid #DDD;
+    margin: 2.5rem 0;
+}
+
+.section-break-2 {
+    border: none;
+    border-top: 1px solid #DDD;
+    margin: 2.5rem auto;
+    width: 80%;
+    @media(min-width: 783px) {
+        width: 60%;
+    }
 }

@@ -1,10 +1,17 @@
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/banner-archive'); ?>
+<?php //get_template_part('template-parts/banner-archive'); ?>
+<?php
+pageBanner(array(
+    'title'     => 'Events',
+    'subtitle'  => 'have some fun together',
+    'photo'     => get_theme_file_uri('/media/img/newsbanner.jpg')
+));
+?>
 
 <div class="container">
     <div class="row events">
-        <div class="col-6">
+        <div class="col-12">
             <?php
               while(have_posts()) {
                 the_post();

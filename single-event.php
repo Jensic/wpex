@@ -3,11 +3,12 @@
   while(have_posts()) {
     the_post(); ?>
 
-    <?php get_template_part('template-parts/banner-archive'); ?>
+    <?php //get_template_part('template-parts/banner-archive'); ?>
+    <?php pagebanner(); ?>
 
     <div class="container">
         <div class="row single-event-ex">
-            <div class="col-8">
+            <div class="col-12">
                 <div class="single-event-ex__container">
                     <?php get_template_part('template-parts/single-event-card'); ?>
                 </div>

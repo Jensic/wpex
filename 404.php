@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/banner-404'); ?> 
+<?php //get_template_part('template-parts/banner-404'); ?>
+<?php 
+pageBanner(array(
+    'title'     => '404',
+    'subtitle'  => 'Something whent wrong',
+    'photo'     => get_theme_file_uri('/media/img/newsbanner.jpg')
+));
+?> 
 
 <div class="container">
 	<div class="row">

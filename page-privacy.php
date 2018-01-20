@@ -9,11 +9,12 @@
   while(have_posts()) {
     the_post(); ?>
     
-    <?php get_template_part('template-parts/banner'); ?>
+    <?php //get_template_part('template-parts/banner'); ?>
+    <?php pagebanner(); ?>
 
     <div class="container">
         <div class="row">
-            <div class="col-12 privacy">
+            <div class="privacy">
                     
                 <?php
                     $theParent = wp_get_post_parent_id(get_the_ID());
@@ -33,7 +34,7 @@
                         ));
 
                         if ($theParent or $testArray) { ?>
-                            <div class="col-2 privacy__container__links">
+                            <div class="col-4 privacy__container__links">
                                 <h2 class="privacy__container__links__title">
                                     <a href="<?php echo get_permalink($theParent); ?>"><?php echo get_the_title($theParent); ?>
                                     </a>

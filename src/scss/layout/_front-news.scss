@@ -1,12 +1,18 @@
 .news {
-    background: linear-gradient(to right bottom,$blue2-light,$blue2-dark);
-    padding-bottom: 4rem;
+    //background: linear-gradient(to right bottom,$blue2-light,$blue2-dark);
+    //background: linear-gradient(to right bottom,$grey1-light,$grey1-dark);
+    background-color: transparent;
+    padding-bottom: 5rem;
+    @media(min-width: 783px) {
+        padding-bottom: 15rem;
+    }
     &__content {
         padding-top: 4rem;
         &__news {
             &__header {
                 text-align: center;
                 margin-bottom: 4rem;
+                color: $color-white;
             }
             &__button {
                 display: flex;
@@ -22,6 +28,7 @@
             &__header {
                 text-align: center;
                 margin-bottom: 4rem;
+                color: $color-white;
             }
             &__button {
                 display: flex;

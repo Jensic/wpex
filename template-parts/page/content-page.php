@@ -1,4 +1,5 @@
-<?php get_template_part('template-parts/banner'); ?>
+<?php //get_template_part('template-parts/banner'); ?>
+<?php pagebanner(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('page__article'); ?>>
 	<header class="page__article__header">

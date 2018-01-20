@@ -1,4 +1,16 @@
 .person {
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-top: 4rem;
+    &__portrait {
+        margin-bottom: 5rem;
+        img {
+            max-width: 100%;
+            height: auto;
+            @media(min-width: 783px) {
+                //width: 100;
+            }
+        }
+    }
 }

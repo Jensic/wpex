@@ -3,11 +3,12 @@
   while(have_posts()) {
     the_post(); ?>
     
-    <?php get_template_part('template-parts/banner'); ?>
-
+    <?php //get_template_part('template-parts/banner'); ?>
+    <?php pagebanner(); ?>
+    
     <div class="container">
         <div class="row contact">
-            <main class="col-6 contact__form">
+            <main class="col-12 contact__form">
                 <?php the_content(); ?>    
             </main>
         </div>

@@ -1,6 +1,13 @@
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/banner-news'); ?>
+<?php //get_template_part('template-parts/banner-news'); ?>
+<?php 
+pageBanner(array(
+    'title'     => 'News',
+    'subtitle'  => 'read about us',
+    'photo'     => get_theme_file_uri('/media/img/newsbanner.jpg')
+));
+?>
 
 <?php
     while(have_posts()) {
@@ -8,7 +15,7 @@
         ?>
         <div class="container">
             <div class="row post">
-                <div class="col-6">
+                <div class="col-12">
                     <article class="card post__container">
                         <div class="card-img-top post__container__img">
                             <?php the_post_thumbnail('medium'); ?>

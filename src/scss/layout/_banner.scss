@@ -15,17 +15,23 @@
         &__logo-box {
             position: absolute;
             top: 4rem;
-            left: 4rem;
-        &__logo {
-            height: 2.5rem;
+            color: white;
+            font-size: 3rem;
+            left: 1rem;
             @media(min-width: 783px) {
-                height: 3.5rem;
+                top: 4rem;
+                left: 4rem;
+            }
+            &__logo {
+                height: 2rem;
+                @media(min-width: 783px) {
+                    height: 3.5rem;
+                }
             }
         }
-        }
         &__text-box {
-            position: absolute;
-            top: 40%;
+            //position: absolute;
+            top: 65%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -80,12 +86,12 @@
                 top: 4rem;
                 left: 4rem;
             }
-        &__logo {
-            height: 2rem;
-            @media(min-width: 783px) {
-                height: 3.5rem;
+            &__logo {
+                height: 2rem;
+                @media(min-width: 783px) {
+                    height: 3.5rem;
+                }
             }
-        }
         }
         &__text-box {
             //position: absolute;
@@ -99,172 +105,6 @@
         }
     }
 }
-
-.newsbanner {
-    background: linear-gradient(-110deg,#ec5252,#6e1a52);
-    &__container {
-        height: 35vh;
-        background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-        url(../media/img/newsbanner.jpg);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-
-        &__logo-box {
-            position: absolute;
-            top: 4rem;
-            left: 4rem;
-        &__logo {
-            height: 3.5rem;
-        }
-        }
-        &__text-box {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    }
-}
-
-.archivebanner {
-    background: linear-gradient(-110deg,#ec5252,#6e1a52);
-    &__container {
-        height: 35vh;
-        background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-        url(../media/img/newsbanner.jpg);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-
-        &__logo-box {
-            position: absolute;
-            top: 4rem;
-            left: 4rem;
-        &__logo {
-            height: 3.5rem;
-        }
-        }
-        &__text-box {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    }
-}
-
-.banner404 {
-    background: linear-gradient(-110deg,#ec5252,#6e1a52);
-    &__container {
-        height: 35vh;
-        background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-        url(../media/img/newsbanner.jpg);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-
-        &__logo-box {
-            position: absolute;
-            top: 4rem;
-            left: 4rem;
-        &__logo {
-            height: 3.5rem;
-        }
-        }
-        &__text-box {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    }
-}
-
-.searchbanner {
-    background: linear-gradient(-110deg,#ec5252,#6e1a52);
-    &__container {
-        height: 35vh;
-        background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-        url(../media/img/newsbanner.jpg);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-
-        &__logo-box {
-            position: absolute;
-            top: 4rem;
-            left: 4rem;
-        &__logo {
-            height: 3.5rem;
-        }
-        }
-        &__text-box {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    }
-}
-
-.pagebanner {
-    background: linear-gradient(-110deg,#ec5252,#6e1a52);
-    &__container {
-        height: 35vh;
-        background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-        url(../media/img/newsbanner.jpg);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-
-        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-
-        &__logo-box {
-            position: absolute;
-            top: 4rem;
-            left: 4rem;
-        &__logo {
-            height: 3.5rem;
-        }
-        }
-        &__text-box {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    }
-}
-
 
 /* .logo:hover {
     animation: moveInRight 1s ease-out;

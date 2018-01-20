@@ -1,5 +1,5 @@
 .single-company {
-    justify-content: center;
+    text-align: center;
     &__article {
         &__header {
             &__link {
@@ -19,7 +19,18 @@
     &__list {
         list-style: none;
         &__item {
-            
+            display: flex;
+            justify-content: center;
+            &__link {
+                display: flex;
+                flex-direction: column-reverse;
+                &__img {
+    
+                }
+                &__title {
+                    
+                }
+            }
         }
     }
 }

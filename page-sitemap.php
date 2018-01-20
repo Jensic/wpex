@@ -3,11 +3,12 @@
   while(have_posts()) {
     the_post(); ?>
     
-    <?php get_template_part('template-parts/banner'); ?>
+    <?php //get_template_part('template-parts/banner'); ?>
+    <?php pagebanner(); ?>
 
     <div class="container">
         <div class="row sitemap">
-            <main class="col-6">
+            <main class="col-12">
                 <?php the_content(); ?>    
             </main>
         </div>

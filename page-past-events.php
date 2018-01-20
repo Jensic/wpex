@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/banner-archive'); ?>
+<?php //get_template_part('template-parts/banner-archive'); ?>
+<?php pagebanner(); ?>
 
 <div class="container">
     <div class="row events">
-        <div class="col-6">
+        <div class="col-12">
             <?php
     
                 $today = date('Ymd');

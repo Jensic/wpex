@@ -4,13 +4,14 @@
 
   while(have_posts()) {
     the_post();
-    get_template_part('template-parts/banner');
+    //get_template_part('template-parts/banner');
+    pagebanner();
     ?>
 
     <div class="container">
 
-        <div class="row person">
-            <div class="col-6">
+        <div class="row">
+            <div class="col-12 person">
                 <div class="person__portrait">
                     <?php the_post_thumbnail('personPortrait'); ?>
                 </div>
