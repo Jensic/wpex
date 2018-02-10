@@ -39,8 +39,6 @@
     }
 }
 
-//@include parallax-init;
-
 .frontbanner {
     //background: linear-gradient(-110deg,$grey2-dark,$grey2-light);
 //    background-image: linear-gradient(
@@ -70,7 +68,6 @@
         background-size: cover;
         background-position: center;
         //position: relative;
-        //@include parallax(-.4);
         //clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
         @media(min-width: 763px) {
             height: 70vh;
@@ -101,11 +98,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             padding: 0;
-            //@include parallax(.4);
         }
     }
 }
 
-/* .logo:hover {
-    animation: moveInRight 1s ease-out;
-} */
